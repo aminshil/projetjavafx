@@ -1,0 +1,10 @@
+.list-cell {
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.list-cell:selected {
+    -fx-background-color: #0096c7; /* Change to your preferred color */
+    -fx-text-fill: white;
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<AnchorPane prefHeight="400.0" prefWidth="772.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.afficherpubController">
+   <children>
+       <Label layoutX="0" layoutY="0" prefHeight="50.0" prefWidth="834.0" style="-fx-background-color: #4CAF50; -fx-font-size: 18px; -fx-text-fill: white; -fx-alignment: CENTER;" text="Liste des publication" />      <TableView fx:id="Listpub" layoutY="100.0" prefHeight="200.0" prefWidth="835.0">
+        <columns>
+          <TableColumn fx:id="SUJ" prefWidth="197.59998166561127" text="sujet" />
+          <TableColumn fx:id="PUB" prefWidth="490.3999328613281" text="publication" />
+            <TableColumn fx:id="act" prefWidth="146.40007324218755" text="actions" />
+        </columns>
+      </TableView>
+   </children>
+    <Button layoutX="612.0" layoutY="327.0" onAction="#goToAddPublication" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" text="Ajouter Publication" />
+   <TextField fx:id="search" layoutX="71.0" layoutY="66.0" promptText="chercher" />
+   <ImageView fitHeight="26.0" fitWidth="31.0" layoutX="31.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@search.png" />
+      </image>
+   </ImageView>
+
+
+</AnchorPane>

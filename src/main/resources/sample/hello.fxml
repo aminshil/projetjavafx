@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginController">
+   <children>
+      <!-- Removed the green AnchorPane to match the provided login screen layout -->
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="256.0" layoutY="72.0" style="-fx-font-size: 30px; -fx-font-weight: bold;" text="LOGIN" />
+            <Label layoutX="100.0" layoutY="120.0" style="-fx-font-size: 16px;" text="Username" />
+            <TextField fx:id="tf_email" layoutX="107.0" layoutY="150.0" prefHeight="40.0" prefWidth="400.0" />
+            <Label layoutX="100.0" layoutY="200.0" style="-fx-font-size: 16px;" text="Password" />
+            <PasswordField fx:id="tf_password" layoutX="107.0" layoutY="230.0" prefHeight="40.0" prefWidth="400.0" />
+            <CheckBox layoutX="100.0" layoutY="280.0" mnemonicParsing="false" text="Remember me" />
+            <Button fx:id="button_login" layoutX="104.0" layoutY="320.0" mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="400.0" styleClass="primary-button" text="LOGIN" />
+            <Label fx:id="lbl_status" layoutX="305.0" layoutY="285.0" style="-fx-text-fill: red;" />
+            <Label layoutX="220.0" layoutY="370.0" text="Not a user ?" />
+            <Button fx:id="button_signup" layoutX="305.0" layoutY="362.0" onAction="#goToSignUp" style="-fx-background-color: transparent;" text="Sign up !" textFill="#3011dc" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

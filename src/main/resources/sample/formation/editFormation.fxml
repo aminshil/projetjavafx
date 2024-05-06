@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="492.0" prefWidth="400.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EditFormationController">
+    <children>
+        <VBox layoutX="14.0" layoutY="14.0" spacing="10.0" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="50">
+            <children>
+                <Label text="Nom de la formation:" />
+                <TextField fx:id="nomFormationField" maxWidth="1.7976931348623157E308" />
+                <Label text="Description:" />
+                <TextArea fx:id="descriptionField" prefHeight="100.0" prefWidth="200.0" />
+                <Label text="Date:" />
+                <DatePicker fx:id="datePicker" maxWidth="1.7976931348623157E308" />
+                <Label text="Formateur:" />
+                <TextField fx:id="formateurField" maxWidth="1.7976931348623157E308" />
+                <Label text="Lieu:" />
+                <TextField fx:id="lieuField" maxWidth="1.7976931348623157E308" />
+                <HBox spacing="10">
+                    <Button onAction="#loadImage" text="Charger une image" />
+                    <ImageView fx:id="imageView" fitHeight="60.0" fitWidth="128.0" />
+                </HBox>
+            </children>
+        </VBox>
+        <HBox layoutX="14.0" layoutY="450.0" spacing="10.0" AnchorPane.leftAnchor="10" AnchorPane.bottomAnchor="10" AnchorPane.rightAnchor="10">
+            <Button fx:id="saveButton" onAction="#saveFormation" text="Enregistrer" />
+            <Button fx:id="cancelButton" onAction="#cancel" text="Annuler" />
+        </HBox>
+    </children>
+</AnchorPane>

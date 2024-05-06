@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.ComboBox?>
+<AnchorPane prefHeight="400.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.updatedemandeController">
+
+    <children>
+        <VBox alignment="CENTER" layoutX="15.0" layoutY="98.0" prefHeight="214.0" prefWidth="600.0" spacing="10">
+
+            <GridPane alignment="CENTER" prefWidth="400">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="156.3999725341797" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="442.80002746582034" minWidth="10.0" prefWidth="442.80002746582034" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+
+                <Label text="l'object de la demande" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="sujet" promptText="Enter le nom du l'object" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Label text="Votre demande" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="demande" promptText="Enter votre demande" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            </GridPane>
+            <Label layoutX="269.0" layoutY="108.0" text="Urgence de la demande" />
+            <ComboBox fx:id="urgence" prefHeight="26.0" prefWidth="205.0" promptText="choisir le niceau de l'urgence" />
+            <Label text="type du demande" />
+            <ComboBox fx:id="type" layoutX="235.0" layoutY="140.0" prefHeight="26.0" prefWidth="207.0" promptText="choisir le type de la demande" />
+        </VBox>
+
+    <Button layoutX="273.0" layoutY="312.0" onMouseClicked="#submitupdate" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Sauvegarder" />
+    <Label layoutX="0" layoutY="0" prefHeight="50.0" prefWidth="630.0" style="-fx-background-color: #4CAF50; -fx-font-size: 18px; -fx-text-fill: white; -fx-alignment: CENTER;" text="Modifier la demande" />
+    </children>
+</AnchorPane>

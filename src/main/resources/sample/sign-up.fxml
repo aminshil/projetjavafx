@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignController">
+   <children>
+      <AnchorPane prefHeight="450.0" prefWidth="456.0" style="-fx-background-color: #3CB371;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="86.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="105.0" layoutY="280.0" text="Sign-up">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="38.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="547.0">
+         <children>
+            <Label layoutX="112.0" layoutY="76.0" text="Nom">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="87.0" layoutY="122.0" text="Prenom">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="103.0" layoutY="172.0" text="Email" textAlignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="211.0" prefHeight="44.0" prefWidth="119.0" text="Mot de passe">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tf_nom" layoutX="166.0" layoutY="78.0" />
+            <TextField fx:id="tf_prenom" layoutX="165.0" layoutY="125.0" />
+            <TextField fx:id="tf_emailS" layoutX="175.0" layoutY="175.0" />
+            <Label fx:id="captchaLabel" layoutX="36.0" layoutY="335.0" text="CAPTCHA">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Label>
+         
+            <Label fx:id="labelError_captcha" layoutX="165.0" layoutY="400.0" textFill="red" />
+
+            <PasswordField fx:id="tf_passwordS" layoutX="172.0" layoutY="223.0" />
+            <Button fx:id="button_sign" layoutX="80.0" layoutY="368.0" mnemonicParsing="false" onAction="#signUp" prefHeight="44.0" prefWidth="286.0" style="-fx-background-color: #3CB371; -fx-cursor: hand;" text="Sign Up">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Label fx:id="lbl_errors" layoutX="23.0" layoutY="359.0" textFill="red" />
+            <Button fx:id="button_signn" layoutX="246.0" layoutY="412.0" mnemonicParsing="false" onAction="#goToSign" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Sign in " textFill="#3e11bc" underline="true">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="137.0" layoutY="416.0" text="Already a member !" />
+            <Label fx:id="labelError_nom" layoutX="127.0" layoutY="107.0" textFill="RED" />
+            <Label fx:id="labelError_prenom" layoutX="127.0" layoutY="152.0" textFill="RED" />
+            <Label fx:id="labelError_email" layoutX="129.0" layoutY="201.0" textFill="RED" />
+            <Label fx:id="labelError_password" layoutX="127.0" layoutY="248.0" textFill="RED" />
+            <DatePicker fx:id="dp_dateNaissance" layoutX="165.0" layoutY="275.0" prefWidth="200.0" />
+            <Button layoutX="206.0" layoutY="304.0" mnemonicParsing="false" onAction="#uploadImage" text="Upload Image" />
+            <Label layoutX="19.0" layoutY="267.0" prefHeight="44.0" prefWidth="142.0" text="Date Naissance">
+
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="tf_captcha" layoutX="158.0" layoutY="333.0" prefHeight="26.0" prefWidth="191.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

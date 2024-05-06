@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.ListdemandesutilisateurController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <!-- Label for the list title -->
+    <Label AnchorPane.topAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+           prefHeight="50.0" style="-fx-background-color: #4CAF50; -fx-font-size: 18px; -fx-text-fill: white; -fx-alignment: CENTER;"
+           text="Liste des demandes" />
+
+
+    <!-- ScrollPane to make the content scrollable -->
+    <ScrollPane AnchorPane.topAnchor="50.0" AnchorPane.bottomAnchor="0.0"
+                AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+
+        <!-- VBox to contain the card components -->
+        <VBox fx:id="cardContainer" spacing="10" />
+
+    </ScrollPane>
+    <Button layoutX="612.0" layoutY="327.0" onAction="#goToAddDemande" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" text="Ajouter demande" />
+
+</AnchorPane>

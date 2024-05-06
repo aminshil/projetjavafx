@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="670.0" prefWidth="1215.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Tableau">
+    <AnchorPane layoutX="201.0" prefHeight="675.0" prefWidth="1031.0">
+    <children>
+        <Label fx:id="labelCurrentUser" layoutX="5.0" layoutY="2.0" prefHeight="34.0" prefWidth="142.0" style="-fx-font-family: 'Bauhaus 93'; -fx-font-size: 20;" text="Connected as: " />
+        <Label fx:id="labelCurrentUserInfo" layoutX="154.0" layoutY="3.0" prefHeight="34.0" prefWidth="384.0" style="-fx-font-family: 'Bauhaus 93'; -fx-font-size: 15;" />
+        <TextField fx:id="searchField" layoutX="5.0" layoutY="75.0" prefHeight="26.0" prefWidth="316.0" promptText="Search by name, first name, or email" />
+
+        <ListView fx:id="listView" layoutX="5.0" layoutY="109.0" prefHeight="566.0" prefWidth="1227.0">
+            <style>
+                -fx-background-color: #f4f4f4;
+                -fx-padding: 10px;
+            </style>
+        </ListView>
+        <Button fx:id="delete_icon" layoutX="338.0" layoutY="71.0" mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="34.0" prefWidth="111.0" style="-fx-background-color: red; -fx-cursor: hand;" text="DELETE " />
+        <Button fx:id="update_icon" layoutX="579.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleUpdateButton" prefHeight="34.0" prefWidth="111.0" style="-fx-background-color: #3CB371; -fx-cursor: hand;" text="UPDATE" />
+        <Button fx:id="verifyButton" layoutX="860.0" layoutY="69.0" mnemonicParsing="false" onAction="#handleVerifyButton" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: black; -fx-cursor: hand;" text="Display chart" textFill="#efe9e9" />
+        <Button fx:id="logoutButton" layoutX="1171.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleLogoutButton" style="-fx-background-color: darkred; -fx-text-fill: white; -fx-cursor: hand;" text="Logout" />
+
+        <Button fx:id="downloadPdfButton" layoutX="698.0" layoutY="69.0" mnemonicParsing="false" onAction="#handleDownloadPdfButton" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: darkblue; -fx-text-fill: white; -fx-cursor: hand;" text="Download PDF" />
+        <ComboBox fx:id="sortComboBox" layoutX="887.0" layoutY="8.0" prefHeight="41.0" prefWidth="237.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="All" />
+                    <String fx:value="Admin" />
+                    <String fx:value="User" />
+                    <String fx:value="Societe" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+
+        <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="288.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@searchLogo.png" />
+            </image>
+        </ImageView>
+      <Button layoutX="458.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleBlockUser" prefHeight="34.0" prefWidth="111.0" style="-fx-background-color: orange; -fx-cursor: hand;" text="BLOCK" />
+    </children>
+    </AnchorPane>
+
+    <VBox prefHeight="636.0" prefWidth="202.0" style="-fx-background-color: #FFFFFF;">
+        <children>
+            <ImageView fitHeight="74.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-y: 20; -fx-translate-x: 45;">
+                <image>
+                    <Image url="@images/img.png" />
+                </image>
+            </ImageView>
+            <Label style="-fx-translate-x: 25; -fx-translate-y: 40;" text="Eco" textFill="#1aa850">
+                <font>
+                    <Font size="17.0" />
+                </font>
+            </Label>
+            <Label style="-fx-translate-x: 55; -fx-translate-y: 15;" text="Partage">
+                <font>
+                    <Font size="17.0" />
+                </font>
+            </Label>
+            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="215.0" style="-fx-translate-y: 40; -fx-background-color: #FFFFFF;" text="Publication" onAction="#handleShowListpubadmin">
+                <font>
+                    <Font size="17.0" />
+                </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="215.0" style="-fx-translate-y: 40; -fx-background-color: #FFFFFF;" text="Demande" onAction="#handleShowListdemadmin">
+                <font>
+                    <Font size="17.0" />
+                </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="215.0" style="-fx-translate-y: 65; -fx-background-color: #FFFFFF;" text="Depot">
+                <font>
+                    <Font size="17.0" />
+                </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="215.0" style="-fx-translate-y: 90; -fx-background-color: #FFFFFF;" text="Produits">
+                <font>
+                    <Font size="17.0" />
+                </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="215.0" style="-fx-translate-y: 115; -fx-background-color: #FFFFFF;" text="Formations" onAction="#handleShowFormations">
+                <font>
+                    <Font size="17.0" />
+                </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="215.0" style="-fx-translate-y: 140; -fx-background-color: #FFFFFF;" text="Evenements">
+                <font>
+                    <Font size="17.0" />
+                </font>
+            </Button>
+            <Button fx:id="RetourB" mnemonicParsing="false" style="-fx-translate-y: 285; -fx-background-color: #FFFFFF;" text="Retour" textFill="#418641">
+                <font>
+                    <Font size="17.0" />
+                </font>
+            </Button>
+        </children>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="419.0" prefWidth="634.0" styleClass="main-container" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FormationController">
+    <VBox layoutX="31.0" layoutY="14.0" spacing="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10">
+        <!-- Search and Sorting Controls -->
+        <HBox spacing="10">
+            <ChoiceBox fx:id="sortChoiceBox" prefHeight="31.0" prefWidth="150.0" />
+            <TextField fx:id="searchField" prefHeight="32.0" prefWidth="351.0" promptText="Rechercher..." HBox.hgrow="ALWAYS" />
+
+        </HBox>
+
+        <!-- Button for Adding New Formation -->
+        <Button fx:id="ajButton" maxWidth="Infinity" onAction="#goToAjoutFormation" style="-fx-background-color: #5cb85c; -fx-text-fill: white;" styleClass="add-button" text="Ajouter" />
+
+        <!-- List of Formations -->
+        <ListView fx:id="formationListView" styleClass="list-view" VBox.vgrow="ALWAYS" />
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="386.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UpdateUserController">
+    <children>
+        <TextField fx:id="tfName" layoutX="127.0" layoutY="30.0" prefWidth="200" />
+        <TextField fx:id="tfEmail" layoutX="127.0" layoutY="70.0" prefWidth="200" />
+        <TextField fx:id="tfPrenom" layoutX="127.0" layoutY="110.0" prefWidth="200" />
+        <PasswordField fx:id="tfPassword" layoutX="127.0" layoutY="150.0" prefWidth="200" />
+        <ComboBox fx:id="cbRole" layoutX="127.0" layoutY="190.0" prefWidth="200">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Admin" />
+                    <String fx:value="User" />
+                    <String fx:value="Societe" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <DatePicker fx:id="dpBirthday" layoutX="128.0" layoutY="230.0" prefWidth="200" />
+        <Button layoutX="130.0" layoutY="270.0" onAction="#chooseImage" prefWidth="200" text="Choose Image" />
+        <ImageView fx:id="imageView" fitHeight="200" fitWidth="200" layoutX="340" layoutY="30" preserveRatio="true" />
+        <Button layoutX="145.0" layoutY="322.0" onAction="#saveUser" prefHeight="26.0" prefWidth="170.0" style="-fx-background-color: green;" text="Save">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label layoutX="86.0" layoutY="30.0" text="Nom">
+         <font>
+            <Font name="Barlow Condensed Black" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="110.0" text="Prenom">
+         <font>
+            <Font name="Barlow Condensed Black" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="71.0" text="Email">
+         <font>
+            <Font name="Barlow Condensed Black" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="189.0" text="Prenom">
+         <font>
+            <Font name="Barlow Condensed Black" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="149.0" text="Password">
+         <font>
+            <Font name="Barlow Condensed Black" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="211.0" prefHeight="61.0" prefWidth="108.0" text="Naissance">
+         <font>
+            <Font name="Barlow Condensed Black" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="249.0" prefHeight="61.0" prefWidth="108.0" text="Image">
+         <font>
+            <Font name="Barlow Condensed Black" size="20.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
